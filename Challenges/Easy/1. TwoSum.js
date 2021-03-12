@@ -45,6 +45,36 @@ function twoSum(nums, target) {
 const num1 = [3, 2, 4];
 const num2 = [2, 7, 4, 5, 2];
 
-console.log(twoSum(2));
-console.log(twoSum(num1, 6));
-console.log(twoSum(num2, 9));
+// console.log(twoSum(2));
+// console.log(twoSum(num1, 6));
+// console.log(twoSum(num2, 9));
+
+
+// !Solution #2: O(n) returning value, not index
+
+function twoSum2(arr, target) {
+  // create an empty object, "nums"
+  let nums = {};
+  // iterate each element in arr
+  for (let num of arr) {
+    // const variable, "possibleMatchingNum" set value as target - element of arr
+    const possibleMatchingNum = target - num;
+    // if possibleMatchingNum is found in the object, "nums"
+    if (possibleMatchingNum in nums) {
+    // return [possibleMatchingNum, element of arr]
+    return [possibleMatchingNum, num]
+    // else set nums[element of arr] = true;
+    } else {
+      nums[num] = true;
+    }
+  }
+
+  // return empty []; (for everything else)
+    return [];
+};
+
+const  nums3 = [2, 7, 4, 5, 2];
+
+console.log(twoSum2(nums3 , 9))
+
+
