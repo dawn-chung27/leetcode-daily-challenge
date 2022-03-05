@@ -52,18 +52,18 @@ const num2 = [2, 7, 4, 5, 2];
 
 // !Solution #2: O(n) returning value, not index
 
-function twoSum2(arr, target) {
+function twoSum2(array, targetSum) {
   // create an empty object, "nums"
   let nums = {};
-  // iterate each element in arr
-  for (let num of arr) {
-    // const variable, "possibleMatchingNum" set value as target - element of arr
-    const possibleMatchingNum = target - num;
+  // iterate each element in array
+  for (let num of array) {
+    // const variable, "possibleMatchingNum" set value as targetSum - element of array
+    const possibleMatchingNum = targetSum - num;
     // if possibleMatchingNum is found in the object, "nums"
     if (possibleMatchingNum in nums) {
-    // return [possibleMatchingNum, element of arr]
+    // return [possibleMatchingNum, element of array]
     return [possibleMatchingNum, num]
-    // else set nums[element of arr] = true;
+    // else set nums[element of array] = true;
     } else {
       nums[num] = true;
     }
