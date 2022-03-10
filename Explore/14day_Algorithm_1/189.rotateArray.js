@@ -17,9 +17,10 @@ var rotate = function(nums, k) {
    rotate(nums, k)
  }
 
- if (k < nums.length) {  
-   for (let i = nums.length-1; i >= nums.length-k; i--) {
+ if (k < nums.length) {  // k = 3  nums.length = 
+   for (let i = nums.length-1; i > nums.length-k; i--) {
     let element = nums.pop(i);
+    console.log(element);
     nums.unshift(element);
     console.log(nums);
    }
