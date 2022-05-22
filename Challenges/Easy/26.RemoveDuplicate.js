@@ -15,7 +15,8 @@ var removeDuplicates = function(nums) {
     nums.push(null);
     nullCounter-=1;
   }
-  return output;
+  // return output;
+  return arr2
 };
 
 const arr1 = [1,1,2];

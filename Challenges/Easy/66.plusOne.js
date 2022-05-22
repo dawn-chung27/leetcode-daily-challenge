@@ -56,10 +56,25 @@ var plusOne = (array) => {
 // const arr1 = [1, 2, 3];
 // const arr = [6,1,4,5,3,9,0,1,9,5,1,9,9,9,9,1,3];
 const arr9 = [7,9,9,9,9,9,9,9,9,9,9,9,9,9,7,9,9];
-const arr8 = [9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9];
 // integer보다 더  큰  데데이이터터타타입
 // console.log(plusOne(arr1));
 
-console.log(plusOne(arr9));
-console.log(plusOne(arr8));
+// console.log(plusOne(arr9));
+// console.log(plusOne(arr8));
 
+const arr8 = [9,9,9];
+const plusUno = (array) => {
+  for (let i = array.length-1; i >= 0; i--) {
+    if (array[i] === 9) {
+      array[i] = 0;
+    }
+    else  {
+      array[i] = array[i]+=1;
+      return array;
+    }
+  }
+  array.unshift(1);
+  return array;
+}
+
+console.log(plusUno(arr8))
