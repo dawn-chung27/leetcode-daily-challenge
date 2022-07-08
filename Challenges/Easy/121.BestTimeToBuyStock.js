@@ -1,3 +1,4 @@
+/*;
 var maxProfit = function(prices) {
     
   let buy = prices[0]; // 1
@@ -18,3 +19,10 @@ let prices2 = [7,6,4,3,1];
 
 console.log(maxProfit(prices1));
 console.log(maxProfit(prices2));
+*/
+let x = 123;
+x.toString().split("");
+console.log(x)
+console.log(typeof x)
+console.log(typeof (x+""))
+console.log((x+"").split(""))
