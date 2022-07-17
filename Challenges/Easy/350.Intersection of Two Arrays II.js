@@ -13,11 +13,13 @@ var intersect = function(nums1, nums2) {
     }
   }
   
-  console.log(hashmap);
+  // console.log(hashmap);
   return result;
 }
 
-const nums1 = [1, 2, 2, 1];
-const nums2 = [2, 2];
+// const nums1 = [1, 2, 2, 1];
+// const nums2 = [2, 2];
 
-console.log(intersect(nums1, nums2));
+// console.log(intersect(nums1, nums2));
+
+console.log(nums1.filter(x=> nums2.includes(x)))

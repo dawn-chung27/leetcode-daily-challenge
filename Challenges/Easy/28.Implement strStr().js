@@ -1,7 +1,9 @@
 var strStr = function(haystack, needle) {
   if (!needle) return 0;
 //! 1st Trial
-  // if (haystack.legnth < needle.length) return -1;
+
+//   if (haystack.length < needle.length) return -1;
+//   console.log(haystack.length, needle.length)
   
 //     let firstIndex = -Infinity;
 //     // let firstIndex = haystack.indexOf(needle[0]);
@@ -31,7 +33,7 @@ var strStr = function(haystack, needle) {
   while (haystack.substring(i, needle.length+i) !== needle && i <= haystack.length) {
     i++;
   }
-  return (i > haystack.length) ? -1 : i;
+  return (i < haystack.length) ? i : -1;
   
 }
 
