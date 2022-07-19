@@ -1,8 +1,5 @@
 const reverseString = function(s) {
-
-//! 1st trial
   return reverse(s, 0, s.length-1);
-
 };
 
 const reverse = (s, left, right) => {
@@ -13,9 +10,11 @@ const reverse = (s, left, right) => {
   s[left] = s[right];
   s[right] = temp;
 
-  return reverse(s, left+1, right-1);
+  reverse(s, left+1, right-1);
 }
 
+const s = ['h','e','l','l','o'];
+console.log(reverseString(s))
 
 //! 2nd Trial
 //   let left = 0;
@@ -33,7 +32,7 @@ const reverse = (s, left, right) => {
 //   return s;
 
 // }
-const s = ['h','e','l','l','o'];
+// const s = ['h','e','l','l','o'];
 
 
-console.log(reverseString(s))
+// console.log(reverseString(s))
