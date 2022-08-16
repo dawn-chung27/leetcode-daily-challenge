@@ -5,7 +5,7 @@
 // 2nd array 'hi'
 
 //  ouput wheter true or false;
-
+// 7/21/2022
 const test = (arr1, arr2) => { // 'hi', 'hi'
   let counter = 0;
   let hashmap = {};
@@ -16,8 +16,8 @@ const test = (arr1, arr2) => { // 'hi', 'hi'
   //  } 
     (hashmap[element]) ? hashmap[element]++ : hashmap[element] = 1; 
     // hashmap: { 'hi' : 1}
-  
   });
+
 console.log(hashmap)
   for (let el of arr2) {
     if (hashmap[el]) {
@@ -25,7 +25,6 @@ console.log(hashmap)
       hashmap[el]--;
     }
     if (hashmap[el] === -1) return false;
-
   }
   
   return counter === arr2.length;
